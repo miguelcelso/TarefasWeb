@@ -1,0 +1,30 @@
+version: "3.8"
+services:
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: rabbitmq
+    ports:
+      - "5672:5672"  # Porta para comunicação com a fila
+      - "15672:15672"  # Porta para a interface web do RabbitMQ (gerenciamento)
+    environment:
+      RABBITMQ_DEFAULT_USER: xavier
+      RABBITMQ_DEFAULT_PASS: xavier
+    volumes:
+      - ./data:/var/lib/rabbitmq  # Mapeamento para persistência de dados
+    networks:
+      - rabbitmq-net
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    container_name: sqlserver
+    environment:
+      SA_PASSWORD: "x@2024ServE#"  # Defina sua senha aqui
+      ACCEPT_EULA: "Y"
+    ports:
+      - "1433:1433"
+    volumes:
+      - sqlserverdata:/var/opt/mssql  # Mapeamento para persistência de dados
+networks:
+  rabbitmq-net:
+    driver: bridge
+volumes:
+  sqlserverdata:
