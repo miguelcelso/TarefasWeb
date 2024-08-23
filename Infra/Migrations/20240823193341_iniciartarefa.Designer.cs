@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Infra.Migrations
 {
     [DbContext(typeof(ContextoTarefa))]
-    [Migration("20240821222242_iniciartarefa")]
+    [Migration("20240823193341_iniciartarefa")]
     partial class iniciartarefa
     {
         /// <inheritdoc />
