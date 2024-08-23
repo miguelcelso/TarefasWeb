@@ -14,7 +14,7 @@
 ###### Execute os comandos ######
 ###### "Add-Migration iniciartarefa -project Infra" ######
 ###### "update-database -project Infra" ######
-###### Caso de erro que o migration já existe, executar o comando "remove-migration" e depois repita os comandos acima ######
+###### Caso de erro que o migration já existe, executar o comando "remove-migration -project Infra" e depois repita os comandos acima ######
 #### Quinto passo abrir o projeto worker no Visual Studio 2022 (Atualizado para trabalhar com .NET 8) ####
 #### Sexto passo abrir o projeto fronttarefa no VSCode ####
 ##### Exceutar no terminal do VSCode o comando "npm install" para instalar os módulos do projeto ####
