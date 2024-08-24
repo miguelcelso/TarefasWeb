@@ -14,7 +14,7 @@
 ###### Execute os comandos ######
 ###### "Add-Migration iniciartarefa -project Infra" ######
 ###### "update-database -project Infra" ######
-###### Caso de erro que o migration já existe, executar o comando "remove-migration" e depois repita os comandos acima ######
+###### Caso de erro que o migration já existe, executar o comando "remove-migration -project Infra" e depois repita os comandos acima ######
 #### Quinto passo abrir o projeto worker no Visual Studio 2022 (Atualizado para trabalhar com .NET 8) ####
 #### Sexto passo abrir o projeto fronttarefa no VSCode ####
 ##### Exceutar no terminal do VSCode o comando "npm install" para instalar os módulos do projeto ####
@@ -23,6 +23,7 @@
 ###### executar no terminal "npm install -g @angular/cli" ######
 #### Oitavo passo executar o projeto TarefasWeb ####
 #### Nono passo executar o projeto fronttarefa no terminal o comando(npm start) ####
+##### serviço está apontando para "https://localhost:7190/Tarefa", caso na execução do projeto TarefasWeb  no Visual Studio ser executado em outra porta, por favor alterar no front #####
 ###### preencher a descrição no formulário e acionar o botão de cadastrar ######
 #### Décimo passo executar o projeto worker ####
 #### Décimo primeiro passo no front executar o botão de consultar para ver o resultado da leitura da fila no rabbitmq e a inclusão da tarefa no banco de dados ####
